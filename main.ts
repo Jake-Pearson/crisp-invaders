@@ -1,3 +1,8 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(assets.image`myImage3`, Mini_cheddar, 0, -50)
+})
+let projectile: Sprite = null
+let Mini_cheddar: Sprite = null
 scene.setBackgroundImage(img`
     fffffffffffffff1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -121,7 +126,7 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
 game.splash("Crisp", "Invaders")
-let Mini_cheddar = sprites.create(assets.image`myImage`, SpriteKind.Player)
-Mini_cheddar.y = 120
+Mini_cheddar = sprites.create(assets.image`myImage`, SpriteKind.Player)
 Mini_cheddar.setStayInScreen(true)
+Mini_cheddar.y = 100
 controller.moveSprite(Mini_cheddar, 100, 0)
