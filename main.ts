@@ -1,5 +1,6 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`myImage3`, Mini_cheddar, 0, -50)
+    projectile.startEffect(effects.blizzard)
 })
 let projectile: Sprite = null
 let Mini_cheddar: Sprite = null
