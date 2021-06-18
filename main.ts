@@ -1,6 +1,11 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    let spaceRaider: Sprite = null
     projectile = sprites.createProjectileFromSprite(assets.image`myImage3`, Mini_cheddar, 0, -50)
     projectile.startEffect(effects.blizzard)
+    spaceRaider.destroy()
+})
+sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
+    info.changeScoreBy(1)
 })
 let projectile: Sprite = null
 let Mini_cheddar: Sprite = null
